@@ -6,19 +6,6 @@ public class Meeting extends Task {
     protected String project;
     protected String start;
 
-
-    public String getTopic() {
-        return topic;
-    }
-
-    public String getProject() {
-        return project;
-    }
-
-    public String getStart() {
-        return start;
-    }
-
     public Meeting(int id, String topic, String project, String start) {
         super(id);
         this.topic = topic;

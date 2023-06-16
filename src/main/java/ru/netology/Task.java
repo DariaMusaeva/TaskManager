@@ -9,13 +9,6 @@ public class Task {
         this.id = id;
     }
 
-    public int getId() {
-        return id;
-    }
-
-    // Ниже находятся вспомогательные методы для корректной работы equals
-    // Переопределять их в наследниках не нужно
-
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -29,13 +22,6 @@ public class Task {
         return Objects.hash(id);
     }
 
-    /**
-     * Метод, проверяющий подходит ли эта задача поисковому запросу.
-     * Эта логика должна быть определена в наследниках, у каждого она будет своя
-     *
-     * @param query Поисковый запрос
-     * @return Ответ на вопрос, подходит ли эта задача под поисковый запрос
-     */
     public boolean matches(String query) {
         return false;
     }

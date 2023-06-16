@@ -3,13 +3,9 @@ package ru.netology;
 public class SimpleTask extends Task {
     protected String title;
 
-    public String getTitle() {
-        return title;
-    }
-
     public SimpleTask(int id, String title) {
-        super(id); // вызов родительского конструктора
-        this.title = title; // заполнение своих полей
+        super(id);
+        this.title = title;
     }
 
     @Override

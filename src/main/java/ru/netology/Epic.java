@@ -2,24 +2,20 @@ package ru.netology;
 
 public class Epic extends Task {
 
-    protected String[] subtasks = new String[0];
+    protected String[] subtasks;
 
     public Epic(int id, String[] subtasks) {
         super(id);
         this.subtasks = subtasks;
     }
 
-    public String[] getSubtasks() {
-        return subtasks;
-    }
-
     @Override
     public boolean matches(String query) {
-        String[] result = new String[subtasks.length + 1];
+        String[] tmp = new String[subtasks.length];
         for (int i = 0; i < subtasks.length; i++) {
-            result[i] = subtasks[i];
-            if (subtasks[subtasks.length].contains(query)) {
-                return  true;
+            tmp[i] = subtasks[i];
+            if (tmp[i].contains(query)) {
+                return true;
             }
         }
         return false;
